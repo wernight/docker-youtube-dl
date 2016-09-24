@@ -13,7 +13,8 @@ What is PhantomJS?
 How to use this image
 =====================
 
-    $ docker run --rm --user $UID:$GID -v $PWD:/downloads wernight/youtube-dl <video_url>
+    $ docker run --rm --user $UID:$GID -v $PWD:/downloads wernight/youtube-dl \
+          <video_url>
 
   * `--user $UID:$GID` is to run as your current user, and not `root`.
   * `-v $PWD:/downloads` is to store downloaded files in the current working directory.
@@ -26,6 +27,7 @@ Features of this image
 
   * **Small**: Built based on official [Alpine Linux](https://registry.hub.docker.com/_/alpine/).
   * **Simple**: One command and you should be ready to go. All documented here.
+  * **Secure**: Runs as any user.
 
 
 User Feedback
