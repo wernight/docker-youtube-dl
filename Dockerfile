@@ -14,6 +14,8 @@ RUN set -x \
     # Basic check it works.
  && youtube-dl --version
 
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+
 WORKDIR /downloads
 
 VOLUME ["/downloads"]
