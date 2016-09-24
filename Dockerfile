@@ -1,7 +1,7 @@
 FROM alpine:3.4
 
 RUN set -x \
- && apk add --no-cache ca-certificates curl python \
+ && apk add --no-cache ca-certificates curl ffmpeg python \
     # Install youtube-dl
     # https://github.com/rg3/youtube-dl
  && curl -Lo /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl \
@@ -21,3 +21,4 @@ WORKDIR /downloads
 VOLUME ["/downloads"]
 
 ENTRYPOINT ["youtube-dl"]
+CMD ["--help"]
