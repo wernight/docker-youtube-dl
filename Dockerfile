@@ -17,7 +17,9 @@ RUN set -x \
  && mkdir /downloads \
  && chmod a+rw /downloads \
     # Basic check it works.
- && youtube-dl --version
+ && youtube-dl --version \
+ && mkdir /.cache \
+ && chmod 777 /.cache
 
 ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
